@@ -41,7 +41,7 @@ export default function Home() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 text-[10px] font-bold tracking-[0.2em] uppercase bg-white shadow-sm text-rose-500 rounded-full border border-rose-50">
             <Flame size={12} className="fill-rose-500" />
-            76 Day Streak on TikTok
+            76 Day Streak ongoing.
           </div>
           <h1 className="text-6xl md:text-8xl font-serif font-medium tracking-tighter text-slate-900 mb-6">
             Appreciation <span className="text-rose-400 italic font-light">Days.</span>
@@ -144,9 +144,13 @@ export default function Home() {
               </div>
             ) : (
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}>
+<<<<<<< HEAD
                 <span className="text-rose-400 font-serif italic text-xl">Dear, OrgiL</span>
+=======
+                <span className="text-rose-400 font-serif italic text-xl">Dear orgiL</span>
+>>>>>>> 686e369 ([UI]: Top)
                 <p className="mt-6 text-slate-600 leading-relaxed max-w-sm mx-auto text-lg">
-                  "Lek gendeng ojok di gendeng gendeng i mbak 😭😭🙏🙏"
+                  "Lek gendeng ojok di gendeng gendeng no mbak 😭😭🙏🙏"
                 </p>
                 <p className="mt-4 text-slate-400 text-sm italic">— Stay sane (or not).</p>
                 <div className="mt-10 pt-10 border-t border-rose-50 flex justify-center gap-4 text-rose-200">
@@ -182,7 +186,7 @@ export default function Home() {
                 exit={{ opacity: 0, y: -10 }}
                 className="text-xs uppercase tracking-[0.3em] text-slate-400 font-bold"
               >
-                {rating === 0 ? "Be honest" : rating === 5 ? "yey" : "xukup tawu 😭😭😭"}
+                {rating === 0 ? "Be honest" : rating === 5 ? "yey" : "xukup tawu D;"}
               </motion.p>
             </AnimatePresence>
           </div>
@@ -192,7 +196,7 @@ export default function Home() {
 
       <footer className="py-20 border-t border-slate-50 text-center relative z-10">
         <p className="text-[10px] text-slate-300 uppercase tracking-[0.5em] font-bold">
-          Made with Next.JS &bull; 2026
+          Made with Next.JS created by Ardyan &bull; 2026
         </p>
       </footer>
     </main>
