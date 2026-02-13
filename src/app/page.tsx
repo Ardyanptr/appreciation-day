@@ -144,7 +144,7 @@ export default function Home() {
               </div>
             ) : (
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}>
-                <span className="text-rose-400 font-serif italic text-xl">Mbak,</span>
+                <span className="text-rose-400 font-serif italic text-xl">Dear, OrgiL</span>
                 <p className="mt-6 text-slate-600 leading-relaxed max-w-sm mx-auto text-lg">
                   "Lek gendeng ojok di gendeng gendeng i mbak 😭😭🙏🙏"
                 </p>
