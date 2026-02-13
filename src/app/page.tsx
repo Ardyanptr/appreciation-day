@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence, Variants } from "framer-motion"
 import { Heart, Coffee, Code, Sparkles, ChevronDown, Flame, MailOpen, Star, Music, History, Zap } from "lucide-react"
 import Confetti from "react-confetti"
 
@@ -15,11 +15,13 @@ export default function Home() {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight })
   }, [])
 
-  const fadeIn = {
+  const fadeIn: Variants = {
     initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+    whileInView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 }
+    }
   }
 
   return (
@@ -60,7 +62,7 @@ export default function Home() {
 
       <div className="max-w-4xl mx-auto space-y-48 py-20 px-6">
         
-        <motion.section id="stats" {...fadeIn} className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <motion.section id="stats" variants={fadeIn} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { label: "Brain Cells Left", value: "2%", icon: <Zap size={16}/> },
             { label: "Sawit Shared", value: "~13k+", icon: <Sparkles size={16}/> },
@@ -75,7 +77,7 @@ export default function Home() {
           ))}
         </motion.section>
 
-        <motion.section {...fadeIn} className="text-center">
+        <motion.section variants={fadeIn} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="text-center">
           <h2 className="text-3xl font-serif mb-10 text-slate-900">Current Vibe</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {["very n🧊", "HIDUP JOK-", "bad🙁", "gud"].map((item) => (
@@ -92,7 +94,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <motion.section {...fadeIn} className="space-y-12">
+        <motion.section variants={fadeIn} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="space-y-12">
           <div className="text-center">
             <h2 className="text-3xl font-serif text-slate-900">Core Memories</h2>
             <p className="text-slate-400 mt-2 italic text-sm">"The ones that aren't on Instagram"</p>
@@ -118,7 +120,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <motion.section {...fadeIn} className="relative">
+        <motion.section variants={fadeIn} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="relative">
           <div className={`p-12 md:p-20 rounded-[4rem] transition-all duration-700 text-center ${isLetterOpen ? 'bg-white shadow-2xl border border-rose-50' : 'bg-rose-50/30 backdrop-blur-sm border border-white/50'}`}>
             {!isLetterOpen ? (
               <div className="space-y-8">
@@ -155,7 +157,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <motion.section {...fadeIn} className="text-center space-y-10 pb-20">
+        <motion.section variants={fadeIn} initial="initial" whileInView="whileInView" viewport={{ once: true }} className="text-center space-y-10 pb-20">
           <h2 className="text-3xl font-serif text-slate-900 italic">Rate this friendship?</h2>
           <div className="flex justify-center gap-3">
             {[1, 2, 3, 4, 5].map((star) => (
